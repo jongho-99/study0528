@@ -19,8 +19,12 @@ bit.addEventListener("click", (e) => {
     const cnt = document.querySelector("input[name=bitcnt]");
     const bs = e.target.innerHTML;
     const print = document.querySelector(".print");
+    if(cnt.value == '') {
+        alert("수량을 입력해주세여 !!!!!");
+        
+    }
 
-    if(bs == '구매' || bs == '판매') {
+    else if(bs == '구매' || bs == '판매') {
     const bank = {
         coinname : coinname.innerHTML,
         price : price.innerHTML,
@@ -69,7 +73,12 @@ ether.addEventListener("click", (e) => {
     const bs = e.target.innerHTML;
     const print = document.querySelector(".print");
 
-    if(bs == '구매' || bs == '판매') {
+    if(cnt.value == '') {
+        alert("수량을 입력해주세여 !!!!!");
+        
+    }
+
+    else if(bs == '구매' || bs == '판매') {
         const bank = {
         coinname : coinname.innerHTML,
         price : price.innerHTML,
@@ -114,7 +123,12 @@ riple.addEventListener("click", (e) => {
     const bs = e.target.innerHTML;
     const print = document.querySelector(".print");
 
-    if(bs == '구매' || bs == '판매') {
+    if(cnt.value == '') {
+        alert("수량을 입력해주세여 !!!!!");
+        
+    }
+
+    else if(bs == '구매' || bs == '판매') {
         const bank = {
         coinname : coinname.innerHTML,
         price : price.innerHTML,
@@ -159,7 +173,12 @@ binan.addEventListener("click", (e) => {
     const bs = e.target.innerHTML;
     const print = document.querySelector(".print");
 
-    if(bs == '구매' || bs == '판매') {
+    if(cnt.value == '') {
+        alert("수량을 입력해주세여 !!!!!");
+        
+    }
+
+    else if(bs == '구매' || bs == '판매') {
         const bank = {
         coinname : coinname.innerHTML,
         price : price.innerHTML,
@@ -204,11 +223,12 @@ sol.addEventListener("click", (e) => {
     const bs = e.target.innerHTML;
     const print = document.querySelector(".print");
 
-    if(cnt.value == null) {
+    if(cnt.value == '') {
         alert("수량을 입력해주세여 !!!!!");
+        
     }
 
-    if(bs == '구매' || bs == '판매') {
+    else if(bs == '구매' || bs == '판매') {
         const bank = {
         coinname : coinname.innerHTML,
         price : price.innerHTML,
