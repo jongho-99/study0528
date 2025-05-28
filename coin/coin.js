@@ -204,6 +204,10 @@ sol.addEventListener("click", (e) => {
     const bs = e.target.innerHTML;
     const print = document.querySelector(".print");
 
+    if(cnt.value == null) {
+        alert("수량을 입력해주세여 !!!!!");
+    }
+
     if(bs == '구매' || bs == '판매') {
         const bank = {
         coinname : coinname.innerHTML,
