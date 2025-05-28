@@ -15,7 +15,6 @@ h1 {
 
 span {
     display: inline-block;  
-    width: 130px;
 }
 
 .listnum {
@@ -23,7 +22,7 @@ span {
 }
 
 .price {
-    width : 100px;
+    width : 150px;
 }
 
 .coinname {
@@ -49,4 +48,13 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+table {
+    border: 1px solid grey;
+    border-radius: 5%;
+}
+
+tr {
+    border-bottom: 1px solid grey;
 }

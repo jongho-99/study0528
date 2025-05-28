@@ -5,11 +5,11 @@ for(i of price) {
     i.innerHTML = parseInt(i.innerHTML).toLocaleString('ko-KR', { style: 'currency', currency: 'KRW' });
 }
 
-const bit = document.querySelector("#bit");
-const ether = document.querySelector("#ether");
-const riple = document.querySelector("#riple");
-const binan = document.querySelector("#binan");
-const sol = document.querySelector("#sol");
+const bit = document.querySelector("#bit_bs");
+const ether = document.querySelector("#ether_bs");
+const riple = document.querySelector("#riple_bs");
+const binan = document.querySelector("#binan_bs");
+const sol = document.querySelector("#sol_bs");
 
 const tradeArr = [];
 
@@ -19,9 +19,9 @@ bit.addEventListener("click", (e) => {
     const cnt = document.querySelector("input[name=bitcnt]");
     const bs = e.target.innerHTML;
     const print = document.querySelector(".print");
+    
     if(cnt.value == '') {
-        alert("수량을 입력해주세여 !!!!!");
-        
+        alert("수량을 입력해주세여 !!");
     }
 
     else if(bs == '구매' || bs == '판매') {
@@ -75,6 +75,7 @@ ether.addEventListener("click", (e) => {
 
     if(cnt.value == '') {
         alert("수량을 입력해주세여 !!!!!");
+        return;
         
     }
 

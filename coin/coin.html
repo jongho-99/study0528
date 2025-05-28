@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -13,59 +13,45 @@
     <h3>코인리스트를 확인해주시고 수량을 기입 후, 구매/판매 버튼을 눌러주세요.</h3>
     
     <hr>
-
-    <div id="coinlist">
-        <div>
-            <span class="listnum">번호</span>
-            <span>비트코인</span>
-            <span class="menuprice">가격</span>
-            <span>수량</span>
-            <span>구매/판매</span>
+    <div id ="main">
+        <div id="coinlist">
+            <table>
+                <tr id="col">
+                    <th>코인명</th>
+                    <th>현재가</th>
+                    <th>변동률</th>
+                </tr>
+                <tr id="bit">
+                    <td class="coinname">비트코인</td>
+                    <td class="price">130000000</td>
+                    <td class="rate">+14.21%</td>
+                </tr>
+                <tr id="ether">
+                    <td class="coinname">이더리움</td>
+                    <td class="price">2600000</td>
+                    <td class="rate">-5.41%</td>
+                </tr>
+                <tr id = "riple">
+                    <td class="coinname">리플</td>
+                    <td class="price">3150</td>
+                    <td class="rate">+8.31%</td>
+                </tr>
+                <tr id = "binan">
+                    <td class="coinname">바이낸스</td>
+                    <td class="price">870000</td>
+                    <td class="rate">+2.14%</td>
+                </tr>
+                <tr id = "sol">
+                    <td class="coinname">솔라나</td>
+                    <td class="price">215000</td>
+                    <td class="rate">-19.21%</td>
+                </tr>
+            </table>
         </div>
-
-        <div id="bit">
-            <span class="listnum">1. </span>
-            <span class="coinname">비트코인</span>
-            <span class="price">130000000</span>
-            <input type="text" name ="bitcnt" placeholder="수량을 입력해주세요">
-            <button>구매</button>
-            <button>판매</button>
-        </div> 
-        <div id="ether">
-            <span class="listnum">2. </span>
-            <span class="coinname">이더리움</span>
-            <span class="price">2600000</span>
-            <input type="text" name ="ethercnt" placeholder="수량을 입력해주세요">
-            <button>구매</button>
-            <button>판매</button>
+        <div id="grahe">
+            
         </div>
-        <div id = "riple">
-            <span class="listnum">3. </span>
-            <span class="coinname">리플</span>
-            <span class="price">3150</span>
-            <input type="text" name ="riplecnt" placeholder="수량을 입력해주세요">
-            <button>구매</button>
-            <button>판매</button>
-        </div>
-        <div id = "binan">
-            <span class="listnum">4. </span>
-            <span class="coinname">바이낸스</span>
-            <span class="price">870000</span>
-            <input type="text" name ="binancnt" placeholder="수량을 입력해주세요">
-            <button>구매</button>
-            <button>판매</button>
-        </div>
-        <div id = "sol">
-            <span class="listnum">5. </span>
-            <span class="coinname">솔라나</span>
-            <span class="price">215000</span>
-            <input type="text" name ="solcnt" placeholder="수량을 입력해주세요">
-            <button>구매</button>
-            <button>판매</button>
-        </div>
-        <div class="print"></div>
     </div>
-
     <hr>
     <div class="tradelist">
         <div>거래내역</div>
@@ -73,6 +59,8 @@
         <div class = "tradelog">
             <!-- appendchild를 통해 요소추가 -->
         </div>
+        
+    
         
     </div>
     <ul>
