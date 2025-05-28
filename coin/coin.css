@@ -1,60 +1,105 @@
+/* Reset & Base */
 body {
-    background-color: black;
-    color : white;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+h1, h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    text-align: center;
+    color: #ccc;
+}
+
+/* Header */
+header {
+    padding: 4rem;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+/* Main Layout */
+main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Coin Table */
+.coin-section {
+    flex: 1 1 100px;
+}
+
+.coin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+}
+
+.coin-table th,
+.coin-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.coin-table tr:hover {
+    background-color: #292929;
+    cursor: pointer;
+}
+
+.coin.selected {
+    background-color: #333 !important;
+}
+
+.rate {
 
 }
 
-h1 {
-    background-color: black;
-    font-size: 50px;
+.up {
+    color: #00ff88;
 }
 
-span {
-    display: inline-block;  
+.down {
+    color: #ff5555;
 }
 
-.listnum {
-    width : 50px;
+
+/* Graph Section */
+.graph-section {
+    flex: 1 1 400px;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
-.price {
-    width : 150px;
+/* Trade Section */
+.trade-section {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    border-top: 1px solid #333;
 }
 
-.coinname {
-    width : 100px;
-}
-
-hr {
-    width: 80%;
-    height: 1px;
-    background-color: white;
-    border: none;
-    margin: 20px 0;
+.print {
+    margin-bottom: 1rem;
+    color: #0f0;
+    font-weight: bold;
 }
 
 .tradelog {
-    width: 600px;
-    height: 400px;
-    border: 3px solid white ;
+    list-style: none;
+    padding: 0;
 }
 
-.tradelist {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-table {
-    border: 1px solid grey;
-    border-radius: 5%;
-}
-
-tr {
-    border-bottom: 1px solid grey;
+.tradelog li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #333;
 }

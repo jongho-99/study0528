@@ -1,69 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
+<html lang="ko">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src ="coin.js"></script>
+    <title>코인 거래 게임</title>
     <link rel="stylesheet" href="coin.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="coin.js"></script>
 </head>
 <body>
-    <h1>CoinGame</h1>
-    <h3>안녕하세요 코인게임입니다.</h3>
-    <h3>코인리스트를 확인해주시고 수량을 기입 후, 구매/판매 버튼을 눌러주세요.</h3>
-    
-    <hr>
-    <div id ="main">
-        <div id="coinlist">
-            <table>
-                <tr id="col">
-                    <th>코인명</th>
-                    <th>현재가</th>
-                    <th>변동률</th>
-                </tr>
-                <tr id="bit">
-                    <td class="coinname">비트코인</td>
-                    <td class="price">130000000</td>
-                    <td class="rate">+14.21%</td>
-                </tr>
-                <tr id="ether">
-                    <td class="coinname">이더리움</td>
-                    <td class="price">2600000</td>
-                    <td class="rate">-5.41%</td>
-                </tr>
-                <tr id = "riple">
-                    <td class="coinname">리플</td>
-                    <td class="price">3150</td>
-                    <td class="rate">+8.31%</td>
-                </tr>
-                <tr id = "binan">
-                    <td class="coinname">바이낸스</td>
-                    <td class="price">870000</td>
-                    <td class="rate">+2.14%</td>
-                </tr>
-                <tr id = "sol">
-                    <td class="coinname">솔라나</td>
-                    <td class="price">215000</td>
-                    <td class="rate">-19.21%</td>
-                </tr>
+    <header>
+        <h1>🪙 CoinGame</h1>
+        <p>안녕하세요! 코인게임에 오신 걸 환영합니다.</p>
+        <p>코인을 선택하고 수량을 입력한 후 <strong>구매</strong> 또는 <strong>판매</strong>를 눌러보세요!</p>
+    </header>
+
+    <main>
+        <section class="coin-section">
+            <table class="coin-table">
+                <thead>
+                    <tr>
+                        <th>코인명</th>
+                        <th>현재가</th>
+                        <th>변동률</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="bit" class="coin">
+                        <td class="coinname">비트코인</td>
+                        <td class="price">130000000</td>
+                        <td class="rate up">+14.21%</td>
+                    </tr>
+                    <tr id="ether" class="coin">
+                        <td class="coinname">이더리움</td>
+                        <td class="price">2600000</td>
+                        <td class="rate down">-5.41%</td>
+                    </tr>
+                    <tr id="riple" class="coin">
+                        <td class="coinname">리플</td>
+                        <td class="price">3150</td>
+                        <td class="rate up">+8.31%</td>
+                    </tr>
+                    <tr id="binan" class="coin">
+                        <td class="coinname">바이낸스</td>
+                        <td class="price">870000</td>
+                        <td class="rate up">+2.14%</td>
+                    </tr>
+                    <tr id="sol" class="coin">
+                        <td class="coinname">솔라나</td>
+                        <td class="price">215000</td>
+                        <td class="rate down">-19.21%</td>
+                    </tr>
+                </tbody>
             </table>
-        </div>
-        <div id="grahe">
-            
-        </div>
-    </div>
-    <hr>
-    <div class="tradelist">
-        <div>거래내역</div>
-        <br>
-        <div class = "tradelog">
-            <!-- appendchild를 통해 요소추가 -->
-        </div>
-        
-    
-        
-    </div>
-    <ul>
-    </ul>
+        </section>
+
+        <section class="graph-section">
+            <h3>최근 거래 금액 그래프</h3>
+            <canvas id="tradeChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <section class="trade-section">
+        <h3>거래내역</h3>
+        <div class="print"></div>
+        <ul class="tradelog"></ul>
+    </section>
 </body>
 </html>
