@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color : white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    background-color: black;
+    font-size: 50px;
+}
+
+span {
+    display: inline-block;  
+    width: 130px;
+}
+
+.listnum {
+    width : 50px;
+}
+
+.price {
+    width : 100px;
+}
+
+.coinname {
+    width : 100px;
+}
+
+hr {
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    border: none;
+    margin: 20px 0;
+}
+
+.tradelog {
+    width: 600px;
+    height: 400px;
+    border: 3px solid white ;
+}
+
+.tradelist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
