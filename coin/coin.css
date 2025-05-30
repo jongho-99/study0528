@@ -10,8 +10,15 @@ body {
 #top {
     display: flex;
     flex : 1 1 auto;
+    padding: 1rem;
+    font-size: 30px;
+    font-weight: 600;
 }
 
+#top > a {
+    text-decoration: none;
+    color: white;
+}
 
 
 h1, h3 {
@@ -26,9 +33,20 @@ p {
 
 /* Header */
 header {
-    padding: 4rem;
+    padding: 3rem;
     background-color: #1f1f1f;
     border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#start {
+    width: 100px;
+    height: 50px;
+    background-color: gainsboro;
+    border-radius: 5%;
 }
 
 /* Main Layout */
