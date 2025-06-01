@@ -13,60 +13,93 @@
         <a href="coin.html">CoinGame</a>
     </div>
     <header>
-        <h1>💰 CoinGame 💰</h1>
-        <p>안녕하세요! 코인게임에 오신 걸 환영합니다 😃</p>
-        <p>코인을 선택하고 수량을 입력한 후 <strong>구매</strong> 또는 <strong>판매</strong>를 눌러보세요!</p>
-        <button id="start"> START </button>
+        <div>
+            <img src="coingamegif.gif" alt="gif">
+        </div>
+        <div id="inside">
+            <h1>🪙 CoinGame 🪙</h1>
+            <p>안녕하세요! 코인게임에 오신 걸 환영합니다 😃</p>
+            <p>코인을 선택하고 차트를 확인 후, <strong>매수</strong> 또는 <strong>매도</strong>를 눌러보세요!!</p>
+            <br>
+            <button id="start">시작하기</button>
+        </div>
+        <div>
+            <img src="coingamegif.gif" alt="gif">
+        </div>
     </header>
 
     <main>
-        <section class="coin-section">
-            <table class="coin-table">
-                <thead>
-                    <tr>
-                        <th>코인명</th>
-                        <th>현재가</th>
-                        <th>변동률</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="bit" class="coin">
-                        <td class="coinname">비트코인</td>
-                        <td class="price">130000000</td>
-                        <td class="rate up">+14.21%</td>
-                    </tr>
-                    <tr id="ether" class="coin">
-                        <td class="coinname">이더리움</td>
-                        <td class="price">2600000</td>
-                        <td class="rate down">-5.41%</td>
-                    </tr>
-                    <tr id="riple" class="coin">
-                        <td class="coinname">리플</td>
-                        <td class="price">3150</td>
-                        <td class="rate up">+8.31%</td>
-                    </tr>
-                    <tr id="binan" class="coin">
-                        <td class="coinname">바이낸스</td>
-                        <td class="price">870000</td>
-                        <td class="rate up">+2.14%</td>
-                    </tr>
-                    <tr id="sol" class="coin">
-                        <td class="coinname">솔라나</td>
-                        <td class="price">215000</td>
-                        <td class="rate down">-19.21%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <div id ="info">
+            <div id="userId">닉네임: </div>
+            <div id="userAs" class="userprice">현금자산: </div>
+            <div id="userAsAll" class="userprice">총 자산: </div>
+            <button id="owncoin">💰 보유코인 💰</button>
+            <div id="timer">시장변동까지 남은시간: </div>
+        </div>
+        <div id = "wrap-section">
+            <section class="coin-section">
+                <table class="coin-table">
+                    <thead>
+                        <tr>
+                            <th>코인명</th>
+                            <th>현재가</th>
+                            <th>변동률</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="bit" class="coin">
+                            <td class="coinname">비트코인</td>
+                            <td class="price"></td>
+                            <td id="rate"></td>
+                        </tr>
+                        <tr id="eth" class="coin">
+                            <td class="coinname">이더리움</td>
+                            <td class="price"></td>
+                            <td id="rate"></td>
+                        </tr>
+                        <tr id="rip" class="coin">
+                            <td class="coinname">리플</td>
+                            <td class="price"></td>
+                            <td id="rate"></td>
+                        </tr>
+                        <tr id="bin" class="coin">
+                            <td class="coinname">바이낸스</td>
+                            <td class="price"></td>
+                            <td id="rate"></td>
+                        </tr>
+                        <tr id="sol" class="coin">
+                            <td class="coinname">솔라나</td>
+                            <td class="price"></td>
+                            <td id="rate"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="bs">
+                    <button id="btn_buy"><strong>매수</strong></button>
+                    <button id="btn_sell"><strong>매도</strong></button>
+                </div>
+            </section>
 
-        <section class="graph-section">
-            <h3>최근 거래 금액 그래프</h3>
-            <canvas id="tradeChart" width="400" height="200"></canvas>
-        </section>
+            <section class=" graph-section">
+                <h3>최근 거래 금액 그래프</h3>
+                <canvas id="tradeChart" width="300" height="150"></canvas>
+            </section>
+        </div>
+        <div class="modal" id="coinModal">
+            <div class="modal-content">
+                <h2 id="modalTitle">님의 보유코인</h2>
+                <p id="bit_modal">비트코인:  </p>
+                <p id="eth_modal">이더리움: </p>
+                <p id="rip_modal">리플: </p>
+                <p id="bin_modal">바이낸스: </p>
+                <p id="sol_modal">솔라나: </p>
+                <h3 id="coinprice">현재 코인가치: </h3>
+            </div>
+        </div>
     </main>
 
     <section class="trade-section">
-        <h3>거래내역</h3>
+        <h2>거래내역</h2>
         <div class="print"></div>
         <ul class="tradelog"></ul>
     </section>

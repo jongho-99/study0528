@@ -1,11 +1,13 @@
 /* Reset & Base */
 body {
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15pt;
     margin: 0;
     padding: 0;
     background-color: #121212;
     color: #fff;
 }
+
 
 #top {
     display: flex;
@@ -21,7 +23,7 @@ body {
 }
 
 
-h1, h3 {
+h1,h2, h3 {
     text-align: center;
     margin-bottom: 0.5rem;
 }
@@ -33,38 +35,79 @@ p {
 
 /* Header */
 header {
-    padding: 3rem;
+    padding: 2rem;
     background-color: #1f1f1f;
     border-bottom: 1px solid #333;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+}
+
+header > #inside {
+    width: 100%;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    font-size: 15pt;
 }
 
 #start {
     width: 100px;
     height: 50px;
+    font-size: 13pt;
+    font-weight: 500;
     background-color: gainsboro;
-    border-radius: 5%;
+    border-radius: 8%;
+}
+
+#start:hover {
+    border: 3px solid red;
 }
 
 /* Main Layout */
-main {
+main{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
 }
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+#info > button {
+    width: 150px;
+    height: 50px;
+    border-radius: 8%;
+    border: 3px solid seashell;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#wrap-section {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
 
 /* Coin Table */
 .coin-section {
-    flex: 1 1 100px;
+    width: 30%;
 }
 
 .coin-table {
     width: 100%;
+    height: 80%;
     border-collapse: collapse;
     background-color: #1a1a1a;
 }
@@ -100,7 +143,7 @@ main {
 
 /* Graph Section */
 .graph-section {
-    flex: 1 1 400px;
+    width: 70%;
     background-color: #1a1a1a;
     padding: 1rem;
     border-radius: 8px;
@@ -122,9 +165,148 @@ main {
 .tradelog {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .tradelog li {
     padding: 0.5rem;
     border-bottom: 1px solid #333;
 }
+
+ /* 모달 스타일 */
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    z-index: 999; /* 화면 가장 위에 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 검은색 배경 */
+    padding-top: 300px;
+}
+
+.modal-content {
+    background-color: #1f1f1f;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    color: #ffffff; /* 텍스트 색상 */
+    font-size: 18px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+#timer.warning {
+    animation: blinkEffect 1s infinite; /* 1초에 한 번씩 애니메이션을 반복 */
+}
+
+/* 애니메이션 정의 */
+@keyframes blinkEffect {
+    0% {
+        color: red;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: red;
+    }
+}
+#bs {
+    flex: 1 1 auto;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#bs button {
+    width: 50%;
+    height: 60%;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+#bs > #btn_buy {
+    background-color: red;
+}
+
+
+#bs button:hover {
+    border: 3px solid white;
+}
+
+.selected {
+    border: 3px solid white;
+}
+
+.tradelog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tradelog li {
+    font-size: 15pt;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 거래 내역 리스트 아이템 스타일 */
+.trade-log-item {
+    font-size: 16px;
+    color: white; 
+    background-color: #121212;
+    width: 50%;
+    padding: 10px; 
+    margin-bottom: 10px;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.trade-log-item-part {
+    margin: 0 15px;  
+}
+
+
+.trade-log-item:hover {
+    border: 3px solid white
+}
+
