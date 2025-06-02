@@ -76,7 +76,7 @@ start_bnt.addEventListener("click",() => {
 
         const user = {
             name : nick,
-            asset : 10000000,
+            asset : 100000000,
             assetAll : 0
         }
 
